@@ -9,7 +9,7 @@ The network is designed with a dual-homed gateway approach:
 * **Internal LAN:** `192.168.10.0/24` with a Virtual IP (VIP) of `.254`.
 * **External WAN:** `192.168.134.0/24` (in my case) connecting to a simulated Internet/NAT cloud.
 * **Redundancy:** R1 is the **Master** (Priority 120), and R2 is the **Backup** (Priority 100).
-* * **Router:** R1 & R2 are Cisco Images of C7200 Series "`c7200-advipservicesk9-mz.152-4.S5.image`".
+* **Router:** R1 & R2 are Cisco Images of C7200 Series "`c7200-advipservicesk9-mz.152-4.S5.image`".
 
 ## 🚀 Key Features
 
