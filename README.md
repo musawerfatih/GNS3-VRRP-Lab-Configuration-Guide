@@ -98,22 +98,6 @@ ip route 0.0.0.0 0.0.0.0 192.168.134.2  (In my case - My NAT Interface IP)
 
 ---
 
-## 🧪 Verification & Testing
-
-### 1. Check VRRP Status
-
-Run this on both routers to see who is Master and who is Backup:
-```bash
-show vrrp brief
-```
-
-### 2. Verify NAT Translations
-
-Check which router is currently translating traffic:
-```bash
-show ip nat translations
-```
----
 ## Configuring IP-SLA on WAN Interfaces of R1 & R2
 ### Step# 1: Configuring IP-SLA on R1
 ```bash
@@ -151,6 +135,23 @@ track 1 ip sla 1 reachability
 ```bash
 interface g2/0
  vrrp 10 track 1 decrement 30
+```
+---
+
+## 🧪 Verification & Testing
+
+### 1. Check VRRP Status
+
+Run this on both routers to see who is Master and who is Backup:
+```bash
+show vrrp brief
+```
+
+### 2. Verify NAT Translations
+
+Check which router is currently translating traffic:
+```bash
+show ip nat translations
 ```
 ---
 
